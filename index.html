@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIAC LKO - Architectural Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="brand">AIAC LKO</a>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="staff.html">Staff & Associates</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="construction.html">Construction</a></li>
+                <li><a href="project-management.html">Project Management</a></li>
+                <li><a href="clients.html">Clients</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="overlay"></div> <!-- Dark overlay for better readability -->
+        <div class="hero-content">
+            <h1>Architectural Excellence</h1>
+            <p>Transforming Visions into Architectural Masterpieces – Experience Design Excellence with AIAC LKO</p>
+            <a href="#about" class="learn-more">Learn More</a>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>An Architect, Interior Designer, Landscape Designer, Project Management & Construction Management Consultant, and the fastest growing Construction Contractor in Lucknow, Architectural Innovations & Construction is a proprietary firm based in the capital city of the state Uttar Pradesh in India.</p>
+            <p>It was established by its Chief Architect Ahmed Haroon who is involved in planning and designing of various Government and Private Projects since the beginning. He has an excellent oversight of his clients' requirements and owns the ability to translate his clients' imaginative dreams into physical, earthly built form.</p>
+            <p>Apart from being an International Associate of American Institute of Architects, he is a qualified Indian Green Building Council Accredited Professional (IGBC AP).</p>
+            <p>The Firm specializes in Sustainable Designs and Architecture. Sustainable or Green Architecture is a term, which not only describes a technologically and materially durable building design, but also an ecologically and environmentally stable one. The firm is always committed to the green architecture with environmentally conscious designs.</p>
+            <p>Besides architects, the firm also includes interior designers & decorators, industrial building planners, landscape architects, and other professionals. Collectively they develop technically sound Master of the Art structures as per the requirement of its clients.</p>
+            <p>Apart from being an architectural firm, AIAC Lucknow is a professional team of builders also. Whether it is a Residential building or a Commercial one, they are here to assist you in all aspects of its construction. Capturing your vision, they create a construction plan that reflects your uniqueness and perception.</p>
+            <p>While the firm is based in Lucknow, it has a vast experience of doing work in various parts of Uttar Pradesh and adjoining states of India.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials-content">
+            <div class="testimonial active">
+                <p>Mr. Haroon designed our home in Vipul Khand, Gomti Nagar, Lucknow, in a very professional manner. He effectively took in our requirements to ensure that the final design met our expectations fully.</p>
+                <h3>Mr. Jawed Usmani & Dr. Farah Usmani</h3>
+            </div>
+            <div class="testimonial">
+                <p>Very professional and commendable. Good team and Quality Assurance structured.</p>
+                <h3>Mr. Himanshu Singh</h3>
+            </div>
+            <div class="testimonial">
+                <p>Good and very nice experience.</p>
+                <h3>Mr. Aditya Mishra</h3>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+        <div class="testimonial-navigation">
+            <span class="prev"><i class="fa fa-arrow-left"></i></span>
+            <span class="next"><i class="fa fa-arrow-right"></i></span>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Architectural Innovations & Construction</p>
+            <p>Architects, Engineers, Interior & Landscape Designers, Construction Contractor and Construction Management Consultants</p>
+            <p>97 - 98, First Floor, Jeevan Plaza, Vipul Khand, Gomti Nagar, Lucknow - 226010.</p>
+            <p>Cell Phone: (+91) 9161214800</p>
+            <p>Phone / Fax: (+91 - 522) 4080510</p>
+            <p>Email: <a href="mailto:aiaclko1@gmail.com">aiaclko1@gmail.com</a></p>
+        </div>
+        <div id="map-container" class="map-container">
+            <!-- Google Map will be lazy-loaded here -->
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 AIAC LKO - All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/creations_4all/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61560357173133" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelector('.learn-more').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Lazy Loading Map
+        document.addEventListener('DOMContentLoaded', function() {
+            let mapContainer = document.getElementById('map-container');
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        let iframe = document.createElement('iframe');
+                        iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.0475976490135!2d80.99258001505115!3d26.853113083151927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd6080c1d6a5%3A0x31ed8f6bb7fd4b0!2sJeevan%20Plaza!5e0!3m2!1sen!2sin!4v1622543760400!5m2!1sen!2sin';
+                        iframe.width = '100%';
+                        iframe.height = '450';
+                        iframe.style.border = '0';
+                        iframe.allowFullscreen = '';
+                        mapContainer.appendChild(iframe);
+                        observer.unobserve(mapContainer);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(mapContainer);
+        });
+
+        // Testimonial Slider
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                if (i === index) {
+                    testimonial.classList.add('active');
+                } else {
+                    testimonial.classList.remove('active');
+                }
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? testimonials.length - 1 : currentIndex - 1;
+            showTestimonial(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === testimonials.length - 1) ? 0 : currentIndex + 1;
+            showTestimonial(currentIndex);
+        });
+    </script>
+</body>
+</html>
